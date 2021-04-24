@@ -11,8 +11,8 @@
     "dev": "nodemon -d 0.2 src/index.ts",
     "start": "node dist/index.js",
     "verify": "npm run test && npm run lint && npm run clean && npm run build",
-    "lint": "eslint \"src/**/*.{ts,json}\"",
-    "lint:fix": "eslint \"src/**/*.{ts,json}\" --fix",
+    "lint": "eslint \"src/**/*.{ts,graphql}\" && prettier \"**/*.json\" --check",
+    "fix": "eslint \"src/**/*.{ts,graphql}\" --fix && prettier \"**/*.json\" --write",
     "version": "npm run verify"
   },
   "keywords": [
@@ -36,9 +36,9 @@
     "nodemon": "^2.0.7",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
-    "ts-jest": "^26.5.4",
+    "ts-jest": "^26.5.5",
     "ts-node": "^9.1.1",
-    "typescript": "^4.2.3"
+    "typescript": "^4.2.4"
   },
   "husky": {
     "hooks": {
@@ -55,6 +55,6 @@
     ]
   },
   "engines": {
-    "node": "^10||^12||^14"
+    "node": "^10||^12||^14||^15"
   }
 }

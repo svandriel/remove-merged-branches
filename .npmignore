@@ -1,10 +1,12 @@
 .editorconfig
-.eslintrc.js
+.eslintignore
+.eslintrc.json
 .prettierignore
+.prettierrc.json
+*.js.map
 *.log
 *.spec.d.ts
 *.spec.js
-*.js.map
 coverage
 jest.config.js
 node_modules
