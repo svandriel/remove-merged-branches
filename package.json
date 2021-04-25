@@ -13,7 +13,8 @@
     "verify": "npm run test && npm run lint && npm run clean && npm run build",
     "lint": "eslint \"src/**/*.{ts,graphql}\" && prettier \"**/*.json\" --check",
     "fix": "eslint \"src/**/*.{ts,graphql}\" --fix && prettier \"**/*.json\" --write",
-    "version": "npm run verify"
+    "version": "npm run verify",
+    "prepublishOnly": "npm run verify"
   },
   "keywords": [
     "typescript",
