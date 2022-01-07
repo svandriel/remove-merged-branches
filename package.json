@@ -24,6 +24,7 @@
   "author": "Sander van Driel <anonymous@example.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
     "@types/jest": "^26.0.24",
     "@types/node": "^16.3.1",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
@@ -32,6 +33,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jest": "^24.3.6",
     "eslint-plugin-prettier": "^3.4.0",
+    "fs-extra": "^10.0.0",
     "husky": "^4.3.8",
     "jest": "^27.0.6",
     "lint-staged": "^11.0.1",
@@ -55,5 +57,9 @@
   },
   "engines": {
     "node": "^10||^12||^14||^15||^16"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10"
   }
 }
