@@ -1,22 +1,25 @@
 {
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "ecmaVersion": 12,
-    "sourceType": "module"
+    "ecmaVersion": 13,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "extends": [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-    "plugin:prettier/recommended",
-    "plugin:jest/recommended"
+    "plugin:jest/recommended",
+    "airbnb",
+    "airbnb-typescript",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
   ],
-  "env": {
-    "browser": false,
-    "node": true,
-    "es2021": true,
-    "jest/globals": true
-  },
   "plugins": ["@typescript-eslint", "jest"],
-  "rules": {}
+  "ignorePatterns": ["jest.config.js"],
+  "rules": {
+    "jest/expect-expect": ["error"],
+    "jest/no-disabled-tests": ["error"],
+    "@typescript-eslint/no-explicit-any": ["error"],
+    "@typescript-eslint/no-unused-vars": ["error"],
+    "no-console": ["off"]
+  }
 }

@@ -1,8 +1,6 @@
 .editorconfig
-.eslintignore
 .eslintrc.json
-.prettierignore
-.prettierrc.json
+.prettierrc.yaml
 *.js.map
 *.log
 *.spec.d.ts
