@@ -38,7 +38,8 @@
     "fix:prettier": "prettier --write \"**/*.{ts,tsx,js,jsx,graphql,json,md,yaml,yml,html}\" --ignore-path .gitignore",
     "version": "npm run verify",
     "prepublishOnly": "npm run verify",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
   },
   "dependencies": {
     "chalk": "^2.4.2",
