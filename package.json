@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "Removes merged git branches",
   "keywords": [
-    "typescript",
-    "node",
-    "boilerplate"
+    "remove",
+    "merged",
+    "git",
+    "branch"
   ],
   "author": {
     "name": "Sander van Driel",
