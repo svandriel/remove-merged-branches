@@ -1,3 +1,3 @@
-import { contains } from 'ramda';
+import { includes } from 'ramda';
 
-export const isAlias = contains('->');
+export const isAlias = includes('->');

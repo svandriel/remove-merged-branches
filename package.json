@@ -1,36 +1,53 @@
 {
-  "name": "typescript-node-boilerplate",
+  "name": "remove-merged-branches",
   "version": "1.0.0",
-  "description": "A strict but unassuming Typescript + Node.JS boilerplate project",
-  "main": "dist/index.js",
-  "bin": "dist/index.js",
-  "scripts": {
-    "build": "tsc",
-    "clean": "rimraf dist coverage",
-    "test": "jest",
-    "dev": "nodemon -d 0.2 src/index.ts",
-    "start": "node dist/index.js",
-    "verify": "npm run test && npm run lint && npm run clean && npm run build",
-    "lint": "npm run lint:prettier && npm run lint:eslint",
-    "lint:eslint": "eslint \"**/*.{ts,tsx,js,jsx}\" --ignore-path .gitignore",
-    "lint:prettier": "prettier --check \"**/*.{ts,tsx,js,jsx,graphql,json,md,yaml,yaml}\" --ignore-path .gitignore",
-    "fix": "npm run fix:prettier && npm run fix:eslint",
-    "fix:eslint": "eslint --fix \"**/*.{ts,tsx,js,jsx}\" --ignore-path .gitignore",
-    "fix:prettier": "prettier --write \"**/*.{ts,tsx,js,jsx,graphql,json,md,yaml,yaml}\" --ignore-path .gitignore",
-    "version": "npm run verify",
-    "prepublishOnly": "npm run verify",
-    "prepare": "husky install"
-  },
+  "description": "Removes merged git branches",
   "keywords": [
     "typescript",
     "node",
     "boilerplate"
   ],
-  "author": "Sander van Driel <anonymous@example.com>",
+  "author": {
+    "name": "Sander van Driel",
+    "email": "sander.van.driel@gmail.com"
+  },
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/svandriel/remove-merged-branches"
+  },
+  "main": "dist/index.js",
+  "bin": {
+    "remove-merged-branches": "dist/bin/remove-merged-branches.js",
+    "rmb": "dist/bin/remove-merged-branches.js"
+  },
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "clean": "rimraf dist coverage",
+    "test": "jest",
+    "dev": "nodemon -d 0.2 src/index.ts",
+    "start": "node dist/index.js",
+    "verify": "npm run test && npm run lint && npm run build",
+    "lint": "npm run lint:prettier && npm run lint:eslint",
+    "lint:eslint": "eslint \"**/*.{ts,tsx,js,jsx}\" --ignore-path .gitignore",
+    "lint:prettier": "prettier --check \"**/*.{ts,tsx,js,jsx,graphql,json,md,yaml,yml,html}\" --ignore-path .gitignore",
+    "fix": "npm run fix:prettier && npm run fix:eslint",
+    "fix:eslint": "eslint --fix \"**/*.{ts,tsx,js,jsx}\" --ignore-path .gitignore",
+    "fix:prettier": "prettier --write \"**/*.{ts,tsx,js,jsx,graphql,json,md,yaml,yml,html}\" --ignore-path .gitignore",
+    "version": "npm run verify",
+    "prepublishOnly": "npm run verify",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "commander": "^9.4.1",
+    "ramda": "^0.28.0"
+  },
   "devDependencies": {
     "@types/jest": "^29.1.2",
     "@types/node": "^18.11.0",
+    "@types/ramda": "^0.28.0",
     "@typescript-eslint/eslint-plugin": "^5.40.0",
     "@typescript-eslint/parser": "^5.40.0",
     "eslint": "^8.25.0",
@@ -53,7 +70,7 @@
       "prettier --write",
       "eslint --fix"
     ],
-    "**/*.{graphql,json,md,yaml,yaml}": [
+    "**/*.{graphql,json,md,yaml,yml}": [
       "prettier --write"
     ]
   },
