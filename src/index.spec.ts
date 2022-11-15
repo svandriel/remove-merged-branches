@@ -1,5 +1,5 @@
-describe('test', () => {
-  it('works', () => {
-    expect(1 + 1).toBe(2);
-  });
+import { removeMergedBranches } from '.';
+
+test('index', () => {
+    expect(removeMergedBranches).toBeDefined();
 });
