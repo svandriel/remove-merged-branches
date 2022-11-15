@@ -1,5 +1,5 @@
 import chalk from 'chalk';
-import { keys, map, merge, trim } from 'ramda';
+import { keys, map, mergeRight, trim } from 'ramda';
 
 import { groupBranchesByRemote } from './functions/group-branches-by-remote';
 import { parseBranchLines } from './functions/parse-branch-lines';
@@ -20,7 +20,7 @@ export async function removeMergedBranches(
   fromBranch: string = 'HEAD',
   options: Partial<RemoveMergedBranchesOptions> = {},
 ): Promise<void> {
-  const opts = merge(DEFAULT_OPTIONS, options);
+  const opts = mergeRight(DEFAULT_OPTIONS, options);
   const { offline, dryRun } = opts;
 
   if (!dryRun && !offline) {
