@@ -11,7 +11,7 @@
     "name": "Sander van Driel",
     "email": "sander.van.driel@gmail.com"
   },
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/svandriel/remove-merged-branches"
