@@ -2,6 +2,8 @@
 
 [![Node.js CI](https://github.com/svandriel/remove-merged-branches/actions/workflows/node.js.yml/badge.svg?branch=master)](https://github.com/svandriel/remove-merged-branches/actions/workflows/node.js.yml)
 
+![Version](https://img.shields.io/github/package-json/v/svandriel/remove-merged-branches?color=%2300d000&label=Latest%20version&style=plastic)
+
 Command line tool removing all branches that have been merged to the current branch.
 
 Supports dry runs and offline use.
